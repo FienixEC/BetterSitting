@@ -349,9 +349,9 @@ class BetterSitting extends PluginBase implements Listener{
         }
     }
 
-    public function onCommand(CommandSender $sender, Command $command, $label, array $args)
+    public function execute(CommandSender $sender, string $alias, array $args): bool{
     {
-        if(strtolower($command->getName()) == "bettersit"){
+        if(strtolower($cmd->getName()) == "bettersit"){
                 if(isset($args[0])) {
                     if (strtolower($args[0]) == "list") {
                         $sender->sendMessage(Color::LIGHT_PURPLE . Color::BOLD . "You need a list? Here u go:");
